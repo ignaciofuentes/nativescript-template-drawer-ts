@@ -22,7 +22,12 @@
         "url": "https://github.com/ignaciofuentes/nativescript-template-drawer-ts/issues"
     },
     "homepage": "https://github.com/ignaciofuentes/nativescript-template-drawer-ts",
-	"devDependencies": {
+	"dependencies": {
+        "nativescript-statusbar": "^1.0.0",
+        "nativescript-telerik-ui": "^0.2.4",
+        "tns-core-modules": "1.6.0"
+    },
+    "devDependencies": {
 		"nativescript-dev-typescript": "^0.3.0"
 	}
 }
