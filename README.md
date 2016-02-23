@@ -1,10 +1,12 @@
 # NativeScript Drawer Template
 
-A quick-and-dirty template for starting a new [NativeScript](https://www.nativescript.org/) app with drawer navigation pre-scaffolded.
+A quick-and-dirty template for starting a new [NativeScript](https://www.nativescript.org/) app with drawer navigation pre-scaffolded in TypeScript.
+
+Full credit to TJ Van Toll for the [original JavaScript version](https://github.com/tjvantoll/nativescript-template-drawer) of this template.
 
 ## Usage
 
-`tns create my-project-name --template nativescript-template-drawer`
+`tns create my-project-name --template https://github.com/ignaciofuentes/nativescript-template-drawer-ts`
 
 ## Screenshots
 
