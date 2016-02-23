@@ -1,17 +1,28 @@
 {
-	"nativescript": {
-		"id": "org.nativescript.myappname",
-		"tns-ios": {
-			"version": "1.6.0"
-		}
+	"name": "nativescript-template-drawer-ts",
+	"main": "app.js",
+	"version": "1.6.0",
+	"author": "Ignacio Fuentes",
+    "description": "A NativeScript starter template with drawer navigation",
+    "license": "MIT",
+	"keywords": [
+		"telerik",
+		"mobile",
+		"nativescript",
+		"{N}",
+		"tns",
+		"appbuilder",
+		"template"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ignaciofuentes/nativescript-template-drawer-ts.git"
 	},
-	"dependencies": {
-		"nativescript-statusbar": "^1.0.0",
-		"nativescript-telerik-ui": "^0.2.4",
-		"tns-core-modules": "1.6.0"
-	},
+	"bugs": {
+        "url": "https://github.com/ignaciofuentes/nativescript-template-drawer-ts/issues"
+    },
+    "homepage": "https://github.com/ignaciofuentes/nativescript-template-drawer-ts",
 	"devDependencies": {
-		"nativescript-dev-typescript": "^0.3.0",
-		"typescript": "^1.8.2"
+		"nativescript-dev-typescript": "^0.3.0"
 	}
 }
