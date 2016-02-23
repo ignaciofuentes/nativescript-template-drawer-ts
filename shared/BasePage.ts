@@ -1,27 +1,26 @@
 import {topmost} from "ui/frame";
-import {Observable} from "data/observable";
 import {Page} from "ui/page";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
 
-var appViewModel = new Observable();
-appViewModel.set("selectedPage" , "home");
-
-export class BasePage {
-    viewModel:Observable = appViewModel;
+let appViewModel = new Observable({selectedPage: "home"});
+export abstract class BasePage {
     
-    loaded = (args)=>{
+    abstract mainContentLoaded(args:EventData);
+    
+    loaded(args){
         let page = <Page>args.object;
         page.bindingContext = appViewModel;   
     }
     
-    toggleDrawer = ()=> {
+    toggleDrawer(){
         let page = <Page>topmost().currentPage;
         let drawer = <any>page.getViewById("drawer");
         drawer.toggleDrawerState();
     }
-    navigate = (args)=> {
+    navigate(args){
         let pageName = args.view.text.toLowerCase();
         appViewModel.set("selectedPage", pageName);
         topmost().navigate("pages/" + pageName + "/" + pageName);
     }
-    
 }
