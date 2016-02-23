@@ -1,0 +1,17 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.myappname",
+		"tns-ios": {
+			"version": "1.6.0"
+		}
+	},
+	"dependencies": {
+		"nativescript-statusbar": "^1.0.0",
+		"nativescript-telerik-ui": "^0.2.4",
+		"tns-core-modules": "1.6.0"
+	},
+	"devDependencies": {
+		"nativescript-dev-typescript": "^0.3.0",
+		"typescript": "^1.8.2"
+	}
+}
