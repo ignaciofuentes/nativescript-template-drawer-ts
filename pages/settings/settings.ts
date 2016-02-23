@@ -1,11 +1,13 @@
 import {BasePage} from "../../shared/BasePage";
 import {topmost} from "ui/frame";
-import {Observable} from "data/observable";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
 
-class SettingsPage extends BasePage {
-    constructor(){
-        super();
-        this.viewModel.set("blackBackground", false);
+let vm = new Observable({ blackBackground: false });
+class SettingsPage extends BasePage {    
+    mainContentLoaded(args:EventData){
+        let view = <View>args.object;
+        view.bindingContext = vm;
     }
 };
 module.exports = new SettingsPage();
