@@ -6,7 +6,7 @@ Full credit to TJ Van Toll for the [original JavaScript version](https://github.
 
 ## Usage
 
-`tns create my-project-name --template https://github.com/ignaciofuentes/nativescript-template-drawer-ts`
+`tns create my-project-name --template nativescript-template-drawer-ts`
 
 ## Screenshots
 
