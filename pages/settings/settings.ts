@@ -10,4 +10,4 @@ class SettingsPage extends BasePage {
         view.bindingContext = vm;
     }
 };
-module.exports = new SettingsPage();
+export = new SettingsPage();

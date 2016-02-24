@@ -22,4 +22,4 @@ class HomePage extends BasePage{
         });
     }
 }
-module.exports = new HomePage();
+export = new HomePage();

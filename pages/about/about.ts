@@ -11,4 +11,4 @@ class AboutPage extends BasePage{
     }
 }
 
-module.exports = new AboutPage();
+export = new AboutPage();
