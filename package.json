@@ -1,7 +1,7 @@
 {
   "name": "nativescript-template-drawer-ts",
   "main": "app.js",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Ignacio Fuentes",
   "description": "A NativeScript starter template, in TypeScript, with drawer navigation",
   "license": "MIT",
