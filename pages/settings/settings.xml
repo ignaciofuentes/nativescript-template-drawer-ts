@@ -1,7 +1,8 @@
-<page
+<dpg:DrawerPage
   xmlns="http://schemas.nativescript.org/tns.xsd"
   xmlns:drawer="nativescript-telerik-ui/sidedrawer"
   xmlns:widgets="shared/widgets"
+  xmlns:dpg="nativescript-telerik-ui/sidedrawer/drawerpage"
   loaded="loaded"
   navigatedTo="navigatedTo">
 
@@ -16,19 +17,20 @@
     </action-bar>
   </page.actionBar>
 
+<dpg:DrawerPage.sideDrawer>
   <drawer:rad-side-drawer id="drawer">
-    <drawer:rad-side-drawer.mainContent>
 
-      <!-- Settings page content -->
-      <grid-layout columns="3*, *" rows="100, *" loaded="mainContentLoaded" backgroundColor="{{ blackBackground ? 'black' : 'white' }}">
-        <label text="Use a black background?" color="{{ blackBackground ? 'white' : 'black' }}" textWrap="true" col="0" row="0" />
-        <switch checked="{{ blackBackground }}" col="1" row="0" />
-      </grid-layout>
 
-    </drawer:rad-side-drawer.mainContent>
     <drawer:rad-side-drawer.drawerContent>
       <widgets:drawer-content />
     </drawer:rad-side-drawer.drawerContent>
   </drawer:rad-side-drawer>
+    </dpg:DrawerPage.sideDrawer>
 
-</page>
+
+      <!-- Settings page content -->
+ <grid-layout columns="3*, *" rows="100, *" loaded="mainContentLoaded" backgroundColor="{{ blackBackground ? 'black' : 'white' }}">
+  <label text="Use a black background?" color="{{ blackBackground ? 'white' : 'black' }}" textWrap="true" col="0" row="0" />
+  <switch checked="{{ blackBackground }}" col="1" row="0" />
+  </grid-layout>
+</dpg:DrawerPage>

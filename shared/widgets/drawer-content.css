@@ -1,0 +1,13 @@
+.drawer-content {
+  background-color: #053140;
+  color: #ffffff;
+  padding-top: 20;
+  width:300;
+}
+.drawer-content label {
+  font-size: 20;
+  margin: 10 0 15 25;
+}
+.selected {
+  color: #e4ba4e;
+}
