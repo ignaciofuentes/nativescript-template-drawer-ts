@@ -1,14 +1,13 @@
 import {BasePage} from "../../shared/BasePage";
 import {Observable, EventData} from "data/observable";
-import {View} from "ui/core/view";
+import { Page } from "ui/page";
 
 let vm = new Observable();
 class AboutPage extends BasePage{
-    mainContentLoaded(args:EventData){
-        //set the bindingContext for the AboutPage content here
-        let view = <View>args.object;
-        view.bindingContext = vm;
+    loaded(args:EventData){
+        let page = <Page>args.object;
+        vm.set("selectedPage", "about");
+        page.bindingContext = vm;
     }
 }
-
 export = new AboutPage();

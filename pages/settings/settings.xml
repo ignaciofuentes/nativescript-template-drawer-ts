@@ -1,13 +1,12 @@
-<dpg:DrawerPage
+<page
+  class="page"
   xmlns="http://schemas.nativescript.org/tns.xsd"
   xmlns:drawer="nativescript-telerik-ui/sidedrawer"
   xmlns:widgets="shared/widgets"
-  xmlns:dpg="nativescript-telerik-ui/sidedrawer/drawerpage"
-  loaded="loaded"
-  navigatedTo="navigatedTo">
+  loaded="loaded">
 
   <page.actionBar>
-    <action-bar title="Settings">
+    <action-bar title="Settings" class="action-bar">
       <navigation-button icon="res://ic_menu" tap="toggleDrawer" ios:visibility="collapsed" />
       <action-bar.actionItems>
         <ios>
@@ -17,20 +16,16 @@
     </action-bar>
   </page.actionBar>
 
-<dpg:DrawerPage.sideDrawer>
-  <drawer:rad-side-drawer id="drawer">
-
-
+  <drawer:rad-side-drawer id="drawer" showOverNavigation="true">
     <drawer:rad-side-drawer.drawerContent>
       <widgets:drawer-content />
     </drawer:rad-side-drawer.drawerContent>
-  </drawer:rad-side-drawer>
-    </dpg:DrawerPage.sideDrawer>
-
-
+<drawer:rad-side-drawer.mainContent>
       <!-- Settings page content -->
  <grid-layout columns="3*, *" rows="100, *" loaded="mainContentLoaded" backgroundColor="{{ blackBackground ? 'black' : 'white' }}">
-  <label text="Use a black background?" color="{{ blackBackground ? 'white' : 'black' }}" textWrap="true" col="0" row="0" />
-  <switch checked="{{ blackBackground }}" col="1" row="0" />
+  <label class="h3 m-20" verticalAlignment="center"  text="Use a black background?" color="{{ blackBackground ? 'white' : 'black' }}" col="0" row="0" />
+  <switch class="switch" col="1" row="0" checked="{{ blackBackground }}" verticalAlignment="center"/>
   </grid-layout>
-</dpg:DrawerPage>
+</drawer:rad-side-drawer.mainContent>
+  </drawer:rad-side-drawer>
+</page>

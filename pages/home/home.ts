@@ -1,21 +1,19 @@
 import {BasePage} from "../../shared/BasePage";
-import {topmost} from "ui/frame";
 import {Observable, EventData} from "data/observable";
-import {View} from "ui/core/view";
+import { Page } from "ui/page";
+import {Image} from "ui/image";
 
-let vm = new Observable({ myText: 'This is the home page' });
+let vm = new Observable();
+let logo:Image;
 class HomePage extends BasePage{
-    
-    //use this function to populate the bindingContext specific to this page
-    //make sure the root element of the main content is setting "mainContentLoaded" as its loaded event
-    mainContentLoaded(args:EventData){
-        let view = <View>args.object;
-        view.bindingContext = vm;
-    }
-    
-    fun(){
-        let page = topmost().currentPage;
-        let logo = page.getViewById("logo");
+    loaded(args:EventData){
+        vm.set("selectedPage", "home");
+        vm.set("text", "This is the home page");
+        let page = <Page>args.object;
+        logo = page.getViewById<Image>("logo");        
+        page.bindingContext = vm;
+    }    
+    fun(){        
         logo.animate({
             rotate: 3600,
             duration: 3000
